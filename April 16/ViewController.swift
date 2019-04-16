@@ -20,13 +20,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func switchButtonPressed(_ sender: Any) {
+        animalLabel.text = ""
         if switchButton.isOn == true {
-            animalLabel.text = "\(catBreeds)"
-        }
+            for indexCat in 0...4 {
+                animalLabel.text! += "\(catBreeds[indexCat])" + "\n"}            }
         if switchButton.isOn == false {
-            animalLabel.text = "(\(dogBreeds)"
+            for indexDog in 0...5 {
+                animalLabel.text! += "\(dogBreeds[indexDog])" + "\n"}
         }
     }
+    }
     
-}
+
 
